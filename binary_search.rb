@@ -1,24 +1,26 @@
 #a is sorted array
 
 # Iterative
-# def binary_search(arr, key)
-#   low  = 0
-#   high = arr.length - 1
+# The iterative solution has the same (log n) runtime complexity
+# as the recursive solution but has a better memory complexity.
+def binary_search(arr, key)
+  low  = 0
+  high = arr.length - 1
 
-#   while low <= high
-#     mid  = low + (high - low) / 2
+  while low <= high
+    mid  = low + (high - low) / 2
 
-#     return mid if arr[mid] == key
+    return mid if arr[mid] == key
 
-#     if arr[mid] > key
-#       high = mid - 1
-#     else
-#       low = mid + 1
-#     end
-#   end
+    if arr[mid] > key
+      high = mid - 1
+    else
+      low = mid + 1
+    end
+  end
 
-#   return -1
-# end
+  return -1
+end
 # ----------
 
 # Recursive
